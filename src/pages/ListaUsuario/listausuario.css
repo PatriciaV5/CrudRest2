@@ -1,0 +1,18 @@
+ul {
+    list-style-type: none; /* Quita los números por defecto */
+    counter-reset: my-counter; /* Reinicia el contador */
+    padding-left: 0; /* Quita el padding por defecto */
+  }
+  
+  /* Estilos para los ítems de la lista */
+  ul li {
+    counter-increment: my-counter; /* Incrementa el contador en cada ítem */
+    margin-bottom: 10px; /* Espaciado entre ítems */
+  }
+  
+  /* Estilos para los números de la lista */
+  ul li::before {
+    content: counter(my-counter) ". "; /* Agrega el número del contador seguido de un punto */
+    font-weight: bold; /* Pone en negrita el número */
+    color: #333; /* Color del número */
+  }
